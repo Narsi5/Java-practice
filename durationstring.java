@@ -6,14 +6,14 @@ public class SecondChallenge {
 
         int minutes = seconds/60;
         int hours = minutes/60;
-        //System.out.println("hours=" + hours);
+        System.out.println("hours=" + hours);
 
         int reaminingMinutes = minutes%60;
-        //System.out.println("minutes =" + minutes);
-        //System.out.println("remainingminutes ="+ reaminingMinutes);
+        System.out.println("minutes =" + minutes);
+        System.out.println("remainingminutes ="+ reaminingMinutes);
 
         int remainingSeconds = seconds%60;
-        //System.out.println("remainingSecond ="+ remainingSeconds);
+        System.out.println("remainingSecond ="+ remainingSeconds);
 
 
         return hours + "h"+ reaminingMinutes+"m"+reaminingMinutes+"s";
