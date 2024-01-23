@@ -1,0 +1,12 @@
+$ vi 4b.sh
+#!/bin/bash
+echo &quot;read a string&quot;
+read string
+words=$(echo -n &quot;$string&quot;|wc -w)
+chars=$(echo -n &quot;$string&quot;|wc -c)
+space=$(expr length &quot;$string&quot; - length `echo &quot;$string&quot;|sed &quot;s/ //g&quot;`)
+specialsymbols=$(echo $string|grep -o [^A-Za-z0-9_[:space:]]|wc -l)
+echo &quot;The number of words = $words&quot;
+echo &quot;The number of characters = $chars&quot;
+echo &quot;Number of white spaces = $space&quot;
+echo &quot;Number of Special symbols =$specialsymbols&quot;
