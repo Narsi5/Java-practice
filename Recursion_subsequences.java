@@ -1,4 +1,5 @@
 public class Recursion_subsequences {
+    //timecomplexity : O(2^n)
     public static void subsequences(String str, int index, String newString){
         if(index == str.length()){
             System.out.println(newString);
