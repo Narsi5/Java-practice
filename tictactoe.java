@@ -23,6 +23,10 @@ public class tictactoe {
                 //place the element
                 board[row][col] = player;
                 gameOver = haveWon(board,player);
+                if (!gameOver && isBoardFull(board)) {
+                    System.out.println("It's a draw!");
+                    break;
+                }
                 if(gameOver){
                     System.out.println("Player "+player +" has won");
                 }else {
@@ -30,6 +34,7 @@ public class tictactoe {
                 }
             }
             else {
+
                 System.out.println("Invalid move");
             }
         }
@@ -45,6 +50,7 @@ public class tictactoe {
             System.out.println();
         }
     }
+
     public static boolean haveWon(char[][] board,char player){
 
         //for rows
@@ -70,6 +76,16 @@ public class tictactoe {
             return true;
         }
         return false;
+    }
+    public static boolean isBoardFull(char[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                if (board[i][j] == ' ') {
+                    return false; // If there's an empty cell, the board is not full
+                }
+            }
+        }
+        return true; // If no empty cells, the board is full
     }
 
 }
