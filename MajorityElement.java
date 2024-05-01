@@ -1,8 +1,8 @@
-import java.security.Key;
+
 import java.util.HashMap;
 
 public class MajorityElement {
-    public static void majority(int nums[]){
+    public static void majority(int[] nums){
         HashMap<Integer,Integer> map = new HashMap<>();
         int n = nums.length;
         for (int i = 0; i < n; i++) {
@@ -22,7 +22,7 @@ public class MajorityElement {
 
     }
     public static void main(String[] args) {
-        int nums[] = {1,2};
+        int[] nums = {1,2};
         majority(nums);
     }
 }
