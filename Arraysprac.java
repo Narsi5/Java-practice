@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Arraysprac {
     public static void main(String[] args) {
-        // 1D arrays
+    // 1D arrays
         Scanner sc = new Scanner(System.in);
 //        System.out.println("Enter the size of the array");
 //        int size = sc.nextInt();
